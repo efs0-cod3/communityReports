@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/overview.css" />
+    <title>RM - Reportes</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img class="rm" src="/images/rmnotext.png" alt="" />
+      </div>
+      <ul class="log-btns">
+        <li>
+          <button class="nav-btn" id="crearReporte">Crear reporte</button>
+        </li>
+        <li><a href="/users/logout"><button class="nav-btn" id="Log-out">Logout</button></a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Bienvenido <%= name %></h1>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+            <td><button class="table-btns">Open</button></td>
+          </tr>
+
+          <tr>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+            <td><button class="table-btns">Open</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <div class="report-modal">
+      <form action="post">
+        <input class="form-title" type="text" placeholder="Title" />
+        <textarea
+          name="report-content"
+          id="report"
+          cols="30"
+          rows="10"
+          placeholder="Crea tu reporte..."
+        ></textarea>
+        <section class="form-btns">
+          <input
+            type="file"
+            id="report-img"
+            name="r-img"
+            accept="image/png, image/jpeg"
+          />
+          <input type="submit" name="" id="enviar" value="Enviar" />
+        </section>
+      </form>
+      <button class="close-modal">X</button>
+    </div>
+
+    <script src="/js/overview.js"></script>
+  </body>
+</html>
